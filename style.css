@@ -457,3 +457,54 @@ h3 { font-size: 1.15rem; }
 .pv-img { width: 100%; aspect-ratio: 320 / 170; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid var(--border); display: none; }
 .project-visual.has-img .pv-img { display: block; }
 .project-visual.has-img .pv-svg { display: none; }
+
+
+/* ================= CONTACT CARDS (Let's work together) ================= */
+.connect-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  max-width: 760px; margin: 0 auto 22px; text-align: left;
+}
+.connect-card {
+  --cc: var(--accent);
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 20px; border-radius: 16px;
+  border: 1px solid var(--border); background: var(--bg-2);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+.connect-card:hover {
+  transform: translateY(-4px); border-color: var(--cc);
+  box-shadow: 0 14px 30px -14px var(--cc);
+}
+.cc-wide { grid-column: 1 / -1; }
+.cc-icon {
+  flex-shrink: 0; width: 48px; height: 48px; display: grid; place-items: center;
+  border-radius: 12px; color: var(--cc);
+  background: color-mix(in srgb, var(--cc) 14%, transparent);
+  transition: background 0.25s, color 0.25s;
+}
+.connect-card:hover .cc-icon { background: var(--cc); color: #fff; }
+.cc-text { flex: 1; min-width: 0; }
+.cc-text strong { display: block; font-family: "Space Grotesk", sans-serif; font-size: 1.05rem; }
+.cc-text small { display: block; color: var(--text-2); font-size: 0.86rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cc-arrow { color: var(--text-3); font-size: 1.2rem; transition: transform 0.2s, color 0.2s; }
+.connect-card:hover .cc-arrow { color: var(--cc); transform: translate(3px, -3px); }
+
+.cc-linkedin { --cc: #0a66c2; }
+.cc-linkedin.cc-wide { background: linear-gradient(120deg, color-mix(in srgb, #0a66c2 16%, var(--bg-2)), var(--bg-2)); }
+.cc-email    { --cc: #ea4335; }
+.cc-github   { --cc: #8b949e; }
+.cc-leetcode { --cc: #ffa116; }
+.cc-resume   { --cc: var(--accent); }
+[data-theme="light"] .cc-github { --cc: #24292f; }
+
+.copy-email {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: var(--text-2);
+  padding: 8px 14px; border-radius: 999px; border: 1px dashed var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.copy-email:hover { color: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 680px) {
+  .connect-grid { grid-template-columns: 1fr; }
+}
