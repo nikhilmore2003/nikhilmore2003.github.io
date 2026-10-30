@@ -1,8 +1,4 @@
-# Nikhil More — Data Analyst Portfolio
 
-Personal portfolio website built with plain HTML, CSS and JavaScript.
-
-Live site: https://nikhilmore2003.github.io
 <div align="center">
 
 <img src="assets/profile.jpg" alt="Nikhil More" width="140" style="border-radius:50%" />
