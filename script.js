@@ -9,6 +9,13 @@
    - link:  optional — a repo, notebook, certificate or article ("" to hide)
    ========================================================= */
 const LEARNING_LOG = [
+     {
+    date: "Nov 2026",
+    tag: "Other",
+    title: "Row Level Security & AI pipelines",
+    text: "Built Daybook: wrote Postgres RLS policies so privacy rules live in the database, and made Gemini output reliable with JSON schemas and retries.",
+    link: "https://github.com/nikhilmore2003/daybook"
+  },
   {
     date: "Mar 2026",
     tag: "Power BI",
